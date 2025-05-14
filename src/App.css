@@ -3,9 +3,8 @@
 }
 
 .App-logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: relative;
+    margin-left: 10px;
     width: 50px;
     height: 50px;
     pointer-events: none;
@@ -17,24 +16,30 @@
     }
 }
 
-.App-header {
+.App {
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: left;
     align-items: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    position: relative;
+    padding: 1rem 0;
+    flex-shrink: 0;
 }
 
 .video-container {
-    width: 90%;
-    height: 90%;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 @keyframes App-logo-spin {
     from {
@@ -44,4 +49,36 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+    .menu-item:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        opacity: 0.95;
+    }
+
+
+.menu-icon {
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
 }
