@@ -3,6 +3,7 @@ import './App.css';
 import VideoStream from './Components/VideoStream';
 import MenuItem from './Components/MenuItem';
 import useFeed from './Hooks/useFeed';
+import './Listeners/NotificationListener.js';
 
 function App() {
     const { handleFeedClick } = useFeed();
